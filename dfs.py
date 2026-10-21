@@ -11,8 +11,8 @@ class DFS:
      
         while self.stack:
             current_state = self.stack.pop()
-            n+=1
-            current_state.display()
+            self.n+=1
+          #  current_state.display(0)
             if current_state == self.goal_state:
                 return self._build_path(current_state)
             for neighbor in current_state.get_neighbors():

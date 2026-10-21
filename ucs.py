@@ -13,7 +13,7 @@ class UCS:
         while self.heap:
             cost, current_state = heapq.heappop(self.heap)
             self.n += 1
-            current_state.display()
+            #current_state.display(0)
 
             if current_state == self.goal_state:
                 return self._build_path(current_state)
@@ -32,4 +32,4 @@ class UCS:
             path.append(state)
             state = self.parent[state]
         path.reverse()
-        return path
+        return path,self.n
