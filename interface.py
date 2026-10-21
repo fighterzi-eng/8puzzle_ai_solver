@@ -66,9 +66,9 @@ def show_state(state, seconds=1, title="8-Puzzle"):
 
 
 def read_input():
-    """Returns (algorithm, heuristic, state); state is None for a random one."""
-    algorithm = input("Algorithm (bfs / dfs / ucs / astar): ").strip().lower()
-    while algorithm not in ("bfs", "dfs", "ucs", "astar"):
+    
+    algorithm = input("Algorithm (bfs / dfs / ucs / astar / iddfs): ").strip().lower()
+    while algorithm not in ("bfs", "dfs", "ucs", "astar","iddfs"):
         algorithm = input("Invalid. Choose bfs, dfs, ucs or astar: ").strip().lower()
 
     heuristic = None
